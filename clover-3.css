@@ -111,7 +111,7 @@ body{
     justify-content: center;
     width: 1000px;
     margin:auto;
-    padding-bottom:100px ;
+    /* padding-bottom:100px ; */
     
 }
 .knowledge_content .content_box {
@@ -167,7 +167,30 @@ body{
     height: 150px;
     border-radius: 50%; 
 }
+.knowledge_item .knowledge_page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+ .knowledge_page .page_left,
+ .knowledge_page .page_right{
+     font-size: 20px;
+     padding-left: 5px;
+     padding-right: 5px;
+ }
+ .knowledge_page .page_number{ 
+     padding-left: 5px;
+     padding-right: 5px;
+ }
+ .knowledge_page .page_number a{
+     text-decoration: none;
+     color: #444;
+     font-size: 20px;
+    
+     
 
+ }
 
 /* -----knowledge-footer----- */
 .knowledge_footer{
