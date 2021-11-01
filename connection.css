@@ -190,7 +190,7 @@ body{
     text-align: center;
     margin: 30px;
     font-size: 20px;
-    color: rgb(44, 43, 43);
+    color: rgb(247, 138, 138);
 }
 .connection_list .list_title img{
     opacity: .3;
@@ -202,19 +202,31 @@ body{
     margin: 20px;
 }
  .title{
+    color: #333;
+    font-weight:bold;
     margin-top: 3px; 
     margin-bottom: 3px;
-    background-color: rgb(245, 196, 196);
-    padding: 3px;
+    /* padding: 3px; */
 }
 input{
     border: none;
+    padding: 3px;
+    background: rgb(255, 255, 255, 0.493);
+    border: 1px solid #555;
 }
 textarea{
     border: none;
 }
 button{
     border: none;
+    background-color:transparent;
+    color: #333;
+    /* font-weight: bold; */
+    border: 1px solid #222;
+    }
+button:hover{
+        background-color: rgb(245, 199, 199);
+        transition: all .45s;
 }
 
 .map_search .pic{

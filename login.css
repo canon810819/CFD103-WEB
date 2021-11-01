@@ -274,11 +274,7 @@ body{
   color: #666;
 }
 
-    
 
-    
-   
-}
 @media screen and (max-width: 768px){
     .login_content{
         width: 100%;
@@ -286,6 +282,13 @@ body{
         margin: auto;
         background: linear-gradient(0deg, #ccc, #fff);
         padding-bottom: 40px;
+    }
+    .form input{
+        width: 100%;
+        max-width: 600px;
+        border: 1px solid #aaa;
+        line-height: 3;
+        box-shadow: rgb(20%, 20%, 40%, .4) 3px 3px 3px  inset;
     }
 }
 @media screen and (max-width: 420px){
@@ -312,6 +315,14 @@ body{
         margin-top: 50px;
         margin-bottom: 50px;
         z-index: 1;
+    }
+    .form input{
+        width: 100%;
+        max-width: 320px;
+        border: 1px solid #aaa;
+        line-height: 3;
+        box-shadow: rgb(20%, 20%, 40%, .4) 3px 3px 3px  inset;
+        margin: auto;
     }
 }
 
