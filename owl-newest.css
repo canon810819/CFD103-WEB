@@ -1,0 +1,51 @@
+
+.newest_map .owl-theme{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.owl-theme .item {
+    /* background: #4dc7a0; */
+    /* padding: 1rem; */
+    box-shadow: 0 0 10px rgb(107, 107, 107);
+  }
+  .owl-theme .item:hover{
+    background-color: rgb(240, 209, 209);
+  }
+  .owl-theme .item img{
+      width: 100%;
+  }
+  .owl-theme .item img:hover{
+      opacity: calc(.4);
+      transition: all .45s;
+  }
+  .owl-carousel .item h4 {
+    width: 100%;
+    color: #333;
+    background: rgb(255, 255, 255, 0.493);
+    font-weight: bold;
+    /* font-size: 1.4375rem; */
+    margin-top: 0rem;
+    padding: 5px;
+   
+  }
+  .owl-carousel .item h4::before{
+    content: 'NEW';
+    color: #fff;
+    background-color: #f00;
+    margin-right: 3pxs;
+    position: absolute;
+    top: 0px;
+    right:-1px;
+  }
+
+  .owl-carousel .item a{
+      text-decoration: none;
+  }
+  @media screen and (max-width: 768px){
+    .newest_map .owl-theme{
+      width: 100%;
+      max-width: 768px;
+      margin: auto;
+  }
+  }

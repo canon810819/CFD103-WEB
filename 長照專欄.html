@@ -6,15 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clover-長照專欄</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="clover-3.css">
+    <link rel="stylesheet" href="knowledge.css">
     <style tye="test/css">
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
     </style>
 </head>
 <body>
     <!-- ---主選單----  -->
    <div class="knowledge-header">  
         <div class="container">
+            <button id="btnHamburger" >
+                <img src="pic/menu_bars.png" width="28">
+            </button>
+            <ul id="menu">
+                <li><a href="關於我們.html">關於我們</a></li>
+                <li><a href="長照機構.html">長照機構</a></li>
+                <li> <a href="長照專欄.html">長照專欄</a></li>
+                <li><a href="照顧Q&A.html">照顧Q&A</a></li>
+                <li><a href="保健器材.html">保健器材</a></li>
+                <li> <a href="聯絡我們.html">聯絡我們</a></li>
+                <li> <a href="登入.html">會員登入</a></li>
+            </ul>
+            <script type="text/javascript">
+                function openCloseMenu(){
+                  document.getElementById("menu").classList.toggle("hidden");
+                }
+                function init(){
+                  document.getElementById("btnHamburger").onclick = openCloseMenu;
+                }
+                window.addEventListener("load", init, false);
+            </script>
             <a href="index.html" class="logo">
                 <img src="pic/商標設計.png" alt="">
             </a>    
@@ -22,8 +44,8 @@
                     <a href="關於我們.html">關於我們</a>
                     <a href="長照機構.html">長照機構</a>
                     <a href="長照專欄.html">長照專欄</a>
-                    <a href="保健器材.html">保健器材</a>
                     <a href="照顧Q&A.html">照顧Q&A</a>
+                    <a href="保健器材.html">保健器材</a>
                     <a href="聯絡我們.html">聯絡我們</a>
                     <a href="登入.html">會員登入</a>
                     <a href="#"><i class="fa fa-shopping-cart"></i></a>     
@@ -51,76 +73,49 @@
                     <a href="#">分享欄</a>    
                 </nav>
             </div>
-            <div class="knowledge_box">
-                <div class="content_box">
-                    <div class="lebal"><span>NEW</span></div>
-                    <div class="content_txt">
-                        <span>照護新知</span>
-                        <h3>安心居家照護，製氧機如何挑選？</h3>
-                        <p>先問問大家一個問題，猜猜台灣人慢性阻塞性肺病(COPD)的比例有多少？</p>
-                        <a href="#">更多內容</a>
+            <div class="column_container">
+                <div class="column_item">
+                   <div class="column_pic">
+                     <img src="pic/col-1.jpeg" alt="">
+                   </div>
+                   <div class="column_txt">
+                     <h2>安心居家照護，製氧機如何挑選？</h2>
+                     <p> 門診時常會遇到各式各樣的患者家屬來詢問，有更多的是居家醫療(醫師、護理師訪視)時發現在家照護上遇到的困擾，但是在釐清呼吸喘或缺氧的原因時，我們仍需要過去病史和治療過程做鑑別診斷。
+                      正常人的血氧飽和度介於94~100%、呼吸次數每分鐘12~20次，而慢性阻塞性肺病的患者血氧則維持在90~94%間是比較適合的。若不符合以上的正常狀態、或是明顯呼吸較喘、不適，則都是異常狀態，需要回診或請教熟悉的醫護人員做進一步的判斷。</p>
+                     <a href="#" class="btn">more</a>
+                   </div>
+                </div>
+                <div class="column_item">
+                  <div class="column_txt">
+                    <h2>慢性傷口難癒合，營養支持是關鍵</h2>
+                    <p>   傷口在復原時都會經歷發炎、增生還有重建的過程，這時患者常會因為傷口而讓身體有不舒服、心情焦慮沮喪、甚至失去自主活動能力等問題產生。 
+                      造成傷口癒合不良的原因，除了身體的慢性發炎反應，導致肌肉流失增加，「營養不良」也是重要因素之一，但要如何讓營養充足、幫助傷口癒合，最重要的是要吃的均衡，熱量、蛋白質攝取一定要足夠。</p>
+                    <a href="#" class="btn">more</a>
+                  </div>
+                  <div class="column_pic">
+                    <img src="pic/col-2.jpeg" alt="">
+                  </div>
+                </div>
+                <div class="column_item">
+                    <div class="column_pic">
+                        <img src="pic/col-3.png" alt="">
                     </div>
-                    <div class="content_pic">
-                        <a href="#"><img src="pic/know-1.png" alt=""></a>
+                    <div class="column_txt">
+                        <h2>安心好素，素食者飲食指南</h2>
+                        <p>  依食物所含的營養素，分全穀根莖類、豆魚肉蛋類、蔬菜類、水果類、低脂乳品類、油脂與堅果種子類等六大類食物。
+                        依素食的食物選擇原則，素食種類有純素、蛋素、奶素、奶蛋素。豆魚肉蛋類食物在「純素、蛋素」者，會以豆類、蛋類取代；而「奶素、奶蛋素」者建議增加低脂或脫脂奶類攝取。</p>
+                        <a href="#" class="btn">more</a>
                     </div>
                 </div>
-                <div class="content_box">
-                    <div class="lebal"><span>NEW</span></div>
-                    <div class="content_txt">
-                        <span>健康新知</span>
-                        <h3>當管灌個案腸胃不適怎麼辦?</h3>
-                        <p>「便秘」和「腹瀉」是長照機構和居家照顧中最常照會營養師的腸胃道問題。</p>
-                        <a href="#">更多內容</a>
-                    </div>
-                    <div class="content_pic">
-                        <a href="#"><img src="pic/know-2.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="content_box">
-                    <div class="lebal"><span>NEW</span></div>
-                    <div class="content_txt">
-                        <span>健康新知</span>
-                        <h3>迎向健康人生，揭密風靡日本七十多年的電位治療</h3>
-                        <p>在台灣的街頭巷尾，不乏可看到店面前，民眾大排長龍的景像，走近一看，原來是</p>
-                        <a href="#">更多內容</a>
-                    </div>
-                    <div class="content_pic">
-                        <a href="#"><img src="pic/know-3.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="content_box">
-                    <div class="content_txt">
-                        <span>照護新知</span>
-                        <h3>長照機構常見老人肺炎問題與營養</h3>
-                        <p> 肺炎的發生與年紀、吞嚥困難、中風嚴重度、日常生活依賴程度有關。</p>
-                        <a href="#">更多內容</a>
-                    </div>
-                    <div class="content_pic">
-                        <a href="#"><img src="pic/know-4.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="content_box">
-                    <div class="content_txt">
-                        <span>照護新知</span>
-                        <h3>慢性傷口難癒合，營養支持是關鍵</h3>
-                        <p>「醫生，為什麼我的傷口都好不了…」，這可能是有慢性傷口的病人最常說的一句</p>
-                        <a href="#">更多內容</a>
-                    </div>
-                    <div class="content_pic">
-                        <a href="#"><img src="pic/know-5.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="content_box">
-                    <div class="lebal"><span>NEW</span></div>
-                    <div class="content_txt">
-                        <span>健康新知</span>
-                        <h3>挑對食物，輕鬆補鈣！</h3>
-                        <p>根據衛福部國健署統計，一般成人每天「鈣質」建議攝取量是1000毫克,</p>
-                        <a href="#">更多內容</a>
-                    </div>
-                    <div class="content_pic">
-                        <a href="#"><img src="pic/know-6.jpg" alt=""></a>
-                    </div>
+                <div class="column_item">
+                  <div class="column_txt">
+                    <h2>居家醫療照護整合計畫</h2>
+                    <p>  民國97年開始的長照十年計畫中的居家式照護服務，主要是針對失能且有醫療照護需求(如鼻胃管、氣切管、尿管或壓瘡)的患者，提供居家照護服務，由醫師以及護理師定期至患者家中置換管路或傷口照護。另一個居家式照護服務是安寧緩和醫療居家照護，提供末期患者居家安寧緩和醫療的全人照護。</p>
+                    <a href="#" class="btn">more</a>
+                  </div>  
+                  <div class="column_pic">
+                    <img src="pic/col-4.jpg" alt="">
+                  </div>
                 </div>
             </div>
             <div class="knowledge_page">
@@ -173,8 +168,8 @@
                     <a href="關於我們.html">關於我們</a>
                     <a href="長照機構.html">長照機構</a>
                     <a href="長照專欄.html">長照專欄</a>
-                    <a href="保健器材.html">保健器材</a>
                     <a href="照顧Q&A.html">照顧Q&A</a>
+                    <a href="保健器材.html">保健器材</a>
                     <a href="聯絡我們.html">聯絡我們</a>
                     <a href="登入.html">會員登入</a>
                     <a href="#"><i class="fa fa-shopping-cart"></i></a>    

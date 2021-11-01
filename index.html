@@ -9,14 +9,35 @@
     <link rel="stylesheet" href="clover.css">
     <style tye="test/css">
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
-    
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
     </style>
 </head>
 
     <!-- ---主選單----  -->
     <header class="main-header">
-        
         <div class="container">
+              <button id="btnHamburger" >
+                <img src="pic/menu_bars.png" width="28">
+              </button>
+              <ul id="menu">
+                <li><a href="關於我們.html">關於我們</a></li>
+                <li><a href="長照機構.html">長照機構</a></li>
+                <li> <a href="長照專欄.html">長照專欄</a></li>
+                <li><a href="照顧Q&A.html">照顧Q&A</a></li>
+                <li><a href="保健器材.html">保健器材</a></li>
+                <li> <a href="聯絡我們.html">聯絡我們</a></li>
+                <li> <a href="登入.html">會員登入</a></li>
+              </ul>
+            
+            <script type="text/javascript">
+              function openCloseMenu(){
+                document.getElementById("menu").classList.toggle("hidden");
+              }
+              function init(){
+                document.getElementById("btnHamburger").onclick = openCloseMenu;
+              }
+              window.addEventListener("load", init, false);
+            </script>
             <a href="index.html" class="logo">
                 <img src="pic/商標設計.png" alt="">
             </a>    
@@ -24,8 +45,8 @@
                     <a href="關於我們.html">關於我們</a>
                     <a href="長照機構.html">長照機構</a>
                     <a href="長照專欄.html">長照專欄</a>
-                    <a href="保健器材.html">保健器材</a>
                     <a href="照顧Q&A.html">照顧Q&A</a>
+                    <a href="保健器材.html">保健器材</a>
                     <a href="聯絡我們.html">聯絡我們</a>
                     <a href="登入.html">會員登入</a>
                     <a href="#"><i class="fa fa-shopping-cart"></i></a>    
@@ -34,35 +55,94 @@
                 <input type="search" name="" id="">
                 <button><i class="fa fa-search"></i></button>
             </form>
-        </div>
+         
     </header>
 
 
     <!-- ---找長照機構--- -->
-    <section>
-      <div class="banner_section">
-          <img src="pic/hands-gde93a285b_1920.jpg" alt="">
+    <section  class="banner_section">
+          <div class="banner_container">
+            <div class="banner_title">
+              <div class="title_pic"><img src="pic/family-2.jpg" alt=""></div>
+              <div class="title_txt"><h1>讓長輩能有舒適生活的長照網路平台</h1></div>
+            </div>
             <div class="banner_box">
                 <div class="box_group">
                     <div class="group_add">
                       <label for="">搜尋地區</label>
-                      <input type="text" name="" id="" placeholder="請選擇">
+                      <select name="city" id="city">
+                        <option selected="selected" value="">請選擇</option>
+                        <option value="宜蘭縣">宜蘭縣</option>
+                        <option value="基隆市">基隆市</option>
+                        <option value="新北市">新北市</option>
+                        <option value="臺北市">臺北市</option>
+                        <option value="桃園市">桃園市</option>
+                        <option value="新竹市">新竹市</option>
+                        <option value="新竹縣">新竹縣</option>
+                        <option value="苗栗縣">苗栗縣</option>
+                        <option value="臺中市">臺中市</option>
+                        <option value="彰化縣">彰化縣</option>
+                        <option value="南投縣">南投縣</option>
+                        <option value="雲林縣">雲林縣</option>
+                        <option value="嘉義縣">嘉義縣</option>
+                        <option value="臺南市">臺南市</option>
+                        <option value="嘉義市">嘉義市</option>
+                        <option value="高雄市">高雄市</option>
+                        <option value="屏東縣">屏東縣</option>
+                        <option value="臺東縣">臺東縣</option>
+                        <option value="花蓮縣">花蓮縣</option>
+                        <option value="澎湖縣">澎湖縣</option>
+                        <option value="金門縣">金門縣</option>
+                      </select>
                     </div>
                     <div class="group_style">
                       <label for="">機構類型</label>
-                      <input type="text" name="" id="" placeholder="請選擇">
+                      <select name="class" id="class">
+                        <option selected="selected" value="">請選擇</option>
+                        <option value="養護型機構">養護型機構</option>
+                        <option value="長期照護型機構">長期照護型機構</option>
+                        <option value="護理之家">護理之家</option>
+                        <option value="護理之家,居家護理">護理之家,居家護理</option>
+                        <option value="護理之家,居家服務">護理之家,居家服務</option>
+                        <option value="日間照顧中心">日間照顧中心</option>
+                      </select>
                     </div>
+
                     <div class="group_price">
                       <label for="">價格</label>
-                      <input type="text" name="" id="" placeholder="請選擇">
+                      <select name="price" id="price">
+                        <option selected="selected" value="">請選擇</option>
+                        <option value="1">1~10000</option>
+                        <option value="2">10001~20000</option>
+                        <option value="3">20001~30000</option>
+                        <option value="4">30001~40000</option>
+                        <option value="5">40001~50000</option>
+                        <option value="6">50001~60000</option>
+                        <option value="7">60001~</option>
+                      </select>
                     </div>
                     <div class="group_seat">
                       <label for="">空床位</label>
-                      <input type="text" name="" id="" placeholder="請選擇">
+                      <select name="bed" id="bed">
+                        <option selected="selected" value="">請選擇</option>
+                        <option value="1">1~5</option>
+                        <option value="2">6~10</option>
+                        <option value="3">11~15</option>
+                        <option value="4">16~20</option>
+                      
+                      </select>
                     </div>
                     <div class="group_evaluation">
                       <label for="">評價</label>
-                      <input type="text" name="" id="" placeholder="請選擇">
+                      <select name="rating" id="rating">
+                        <option selected="selected" value="">請選擇</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      
+                      </select>
                     </div>
                 </div>
                 <div class="box_search">
@@ -71,41 +151,43 @@
                       <input type="text" name="" id="" placeholder="請輸入機構名稱或地址">
                   </div>
                   <div class="search_btn">
-                    <button class="btn">開始搜尋<i class="fa fa-search"></i></button>
+                    <a href="#">開始搜尋<i class="fa fa-search"></i></a>
                   </div>
                 </div>
             </div>
-      </div>
+          </div>  
     </section>
 
 
     <!-- ----關於我們---- -->
     <section div class="idea_section">
-      <div class="idea_place">
-          <div class="idea_box">
-            <div class="idea_item">
-              <h1>理念</h1>
-              <p>“用心聽見需求和感動<br>
-                <br>
-                堅持團隊一步一腳印<br>
-                <br>
-                連結整合多元服務資源”<br>
-                <br>
-                <br>
-                一個讓長輩能擁有舒適生活的網路平台<br>
-                <br>
-                不論在何處，希望讓愛與歡笑充滿每一位長輩心中<br>
-                <br>
-                由專業醫護團隊親身走訪每間長照機構、測試每樣產品<br>
-                <br>
-                用心體會每位長者的需求及舒適度<br>
-                <br>
-                和您一起擁有一個安心、舒適的年長生活</p>
+      <div class="idea_container">
+        <div class="idea_place">
+            <div class="idea_box">
+              <div class="idea_item">
+                <h1>理念</h1>
+                <p>“用心聽見需求和感動<br>
+                  <br>
+                  堅持團隊一步一腳印<br>
+                  <br>
+                  連結整合多元服務資源”<br>
+                  <br>
+                  <br>
+                  一個讓長輩能擁有舒適生活的網路平台<br>
+                  <br>
+                  不論在何處，希望讓愛與歡笑充滿每一位長輩心中<br>
+                  <br>
+                  由專業醫護團隊親身走訪每間長照機構、測試每樣產品<br>
+                  <br>
+                  用心體會每位長者的需求及舒適度<br>
+                  <br>
+                  和您一起擁有一個安心、舒適的年長生活</p>
+              </div>
             </div>
-          </div>
-          <div class="idea_pic">
-            <img src="pic/people-g6b6660452_1920.jpg" alt="">
-          </div>
+            <div class="idea_pic">
+              <img src="pic/care.webp" alt="">
+            </div>
+        </div>
       </div>
     </section>
 
@@ -113,13 +195,17 @@
     <!-- ---最新長照機構--- -->
     <section class="newest_section">
       <div class="newest_container">
+        <div class="newest_pic">
+          <img src="pic/flower-1.png" alt="">
+        </div>
         <div class="newest_title">
+         
           <h2><img src="pic/home (2).png" alt="">最新長照機構</h2>
         </div>
           <div class="newest_menu">
             <div class="newest_item">
               <div class="pic">
-                <img src="pic/home-1.jpg" alt="">
+                <a href="#"><img src="pic/home-1.jpg" alt=""></a>
               </div>
               <div class="newest_name">
                   <h3>屏東縣私立安德老人養護中心</h3>
@@ -129,14 +215,14 @@
               </div>
               <div class="newest_other">
                 <span>瀏覽數2896次</span>
-                <button class="btn">詳細說明</button>
+                   <a href="#">詳細說明</a>
               </div>
             </div>
             <div class="newest_item">
               <div class="pic">
-                <img src="pic/home-2.jpg" alt="">
+                <a href="#"><img src="pic/home-2.jpg" alt=""></a>
               </div>
-              <div class="newest_name">
+              <div class="newest_name" id="first">
                 <h3>私立建安護理之家</h3>
                   <div class="add_name">
                     <i class="fa fa-map-marker"></i>新北市板橋區民權路174號1-6樓
@@ -144,12 +230,12 @@
               </div>
               <div class="newest_other">
                 <span>瀏覽數1290次</span>
-                <button class="btn">詳細說明</button>
+                <a href="#">詳細說明</a>
               </div>
             </div>
             <div class="newest_item">
               <div class="pic">
-                <img src="pic/home-3.jpg" alt="">
+                <a href="#"><img src="pic/home-3.jpg" alt=""></a>
               </div>
               <div class="newest_name">
                 <h3>臺東縣私立九如老人長期照顧中心(養護型)</h3>
@@ -159,12 +245,12 @@
               </div>
               <div class="newest_other">
                 <span>瀏覽數1344次</span>
-                <button class="btn">詳細說明</button>
+                <a href="#">詳細說明</a>
               </div>
             </div>
             <div class="newest_item">
               <div class="pic">
-                <img src="pic/home-4.jpg" alt="">
+                <a href="#"><img src="pic/home-4.jpg" alt=""></a>
               </div>
               <div class="newest_name">
                 <h3>花蓮縣私立長生老人養護中心</h3>
@@ -174,27 +260,27 @@
               </div>
               <div class="newest_other">
                 <span>瀏覽數1896次</span>
-                <button class="btn">詳細說明</button>
+                <a href="#">詳細說明</a>
               </div>
             </div>
             <div class="newest_item">
               <div class="pic">
-                <img src="pic/home-5.jfif" alt="">
+                <a href="#"><img src="pic/home-7.jpg" alt=""></a>
               </div>
               <div class="newest_name">
                 <h3>海山護理之家</h3>
-                <div class="add_name">
+                <div class="add_name" id="first">
                   <i class="fa fa-map-marker"></i>花蓮縣吉安鄉東海六街81號  
                 </div>
               </div>
               <div class="newest_other">
                 <span>瀏覽數3000次</span>
-                <button class="btn">詳細說明</button>
+                <a href="#">詳細說明</a>
               </div>
             </div>
             <div class="newest_item">
               <div class="pic">
-                <img src="pic/home-6.jpg" alt="">
+                <a href="#"><img src="pic/home-6.jpg" alt=""></a>
               </div>
               <div class="newest_name">
                 <h3>財團法人台灣省私立嘉義博愛仁愛之家</h3>
@@ -204,7 +290,7 @@
               </div>
               <div class="newest_other">
                 <span>瀏覽數1500次</span>
-                <button class="btn">詳細說明</button>
+                <a href="#">詳細說明</a>
               </div>
             </div>
         </div>
@@ -216,36 +302,40 @@
     <section class="knowledge_section">
       <div class="knowledge_container">
         <div class="knowledge_logo">
-          <img src="pic/商標設計.png" alt="">
+          <img src="pic/flower-1.png" alt="">
         </div>
         <div class="knowledge_title">
           <h2><img src="pic/book (1).png" alt="">照護新知識</h2>
         </div>
-          <div class="knowledge_item">
-            <nav class="knowledge_btn">
-                <a href="#"> <img src="pic/icon-1.png" alt="">照護準備</a>
-                <a href="#"><img src="pic/icon-2.png" alt="">衛生照護</a>
-                <a href="#"><img src="pic/icon-3.png" alt="">運動照護</a>
-                <a href="#"><img src="pic/icon-4.png" alt="">居家照護</a>
-                <a href="#"><img src="pic/icon-5.png" alt="">行動照護</a>
-                <a href="#"><img src="pic/icon-6.png" alt="">疾病照護</a>    
-            </nav>
+          <div class="knowledge_item"> 
+              <ul class="knowledge_btn">
+                    <a href="##"> <img src="pic/icon-1.png" alt="">照護準備</a>
+                    <a href="##"><img src="pic/icon-2.png" alt="">衛生照護</a>
+                    <a href="#"><img src="pic/icon-3.png" alt="">運動照護</a>
+                    <a href="#"><img src="pic/icon-4.png" alt="">居家照護</a>
+                    <a href="#"><img src="pic/icon-5.png" alt="">行動照護</a>
+                    <a href="#"><img src="pic/icon-6.png" alt="">疾病照護</a> 
+    
+                </ul>
+              <div class="knowledge_pic">
+
+              </div> 
             <div class="knowledge_ans">
               <div class="ans_title">
                 <h3><img src="pic/icon-1.png" alt="">照護準備</h3>
               </div>
               <div class="ans_content">
                   <div class="content_txt">
-                    <p>失能者如何挑選照顧方式？<br>
+                      <a href="#"><p><img src="pic/arrowhead_down.png" alt="">失能者如何挑選照顧方式？</p></a><br>
                       <br> 
-                      失能者如何挑選照顧方式... <br>
+                      <a href="#"><p><img src="pic/arrowhead_down.png" alt=""> 失能者如何挑選照顧方式...</p></a> <br>
                       <br> 
-                      失能者照顧面臨的困難 ... <br>
+                      <a href="#"><p><img src="pic/arrowhead_down.png" alt="">失能者照顧面臨的困難 ...</p></a> <br>
                       <br> 
-                      各縣市長照管理中心 ... <br>
+                      <a href="#"><p><img src="pic/arrowhead_down.png" alt="">各縣市長照管理中心 ...</p></a> <br>
                       <br> 
-                      如何挑選安養機構 ...
-                    </p>
+                      <a href="#"><p><img src="pic/arrowhead_down.png" alt="">如何挑選安養機構 ...</p></a>
+                    
                   </div>
               </div>
             </div>
@@ -257,42 +347,52 @@
     <!-- ------長照專欄----- -->
     <section class="column_section">
         <div class="column_container">
-            <div class="column_title"><h2><img src="pic/social_care (2).png" alt="">長照專欄</h2></div>
-              <div class="column_box">
-                <div class="column_item">
-                  <div class="column_pic">
-                    <img src="pic/column-1.jfif" alt="">
-                  </div>
-                  <div class="column_txt">
-                    <h3>安心居家照護，製氧機如何挑選？</h3>
-                  </div>
-                </div>
-                <div class="column_item">
-                  <div class="column_pic">
-                    <img src="pic/column-2.png" alt="">
-                  </div>
-                  <div class="column_txt">
-                    <h3>慢性傷口難癒合，營養
-                      支持是關鍵</h3>
-                  </div>
-                </div>
-                <div class="column_item">
-                  <div class="column_pic">
-                    <img src="pic/column-3.png" alt="">
-                  </div>
-                  <div class="column_txt">
-                    <h3>安心好素，素食者飲食指南</h3>
-                  </div>
-                </div>
-                <div class="column_item">
-                  <div class="column_pic">
-                    <img src="pic/column-4.jfif" alt="">
-                  </div>
-                  <div class="column_txt">
-                    <h3>居家醫療照護整合計畫</h3>
-                  </div>
-                </div>
-              </div>  
+          <div class="column_title">
+            <h2><img src="pic/social_care (2).png" alt="">長照專欄</h2>
+          </div>
+           <div class="column_item">
+             <div class="column_pic">
+               <img src="pic/col-1.jpeg" alt="">
+             </div>
+             <div class="column_txt">
+               <h2>安心居家照護，製氧機如何挑選？</h2>
+               <p> 門診時常會遇到各式各樣的患者家屬來詢問，有更多的是居家醫療(醫師、護理師訪視)時發現在家照護上遇到的困擾，但是在釐清呼吸喘或缺氧的原因時，我們仍需要過去病史和治療過程做鑑別診斷。
+                正常人的血氧飽和度介於94~100%、呼吸次數每分鐘12~20次，而慢性阻塞性肺病的患者血氧則維持在90~94%間是比較適合的。若不符合以上的正常狀態、或是明顯呼吸較喘、不適，則都是異常狀態，需要回診或請教熟悉的醫護人員做進一步的判斷。</p>
+               <a href="#" class="btn">more</a>
+             </div>
+           </div>
+           <div class="column_item">
+            <div class="column_txt">
+              <h2>慢性傷口難癒合，營養支持是關鍵</h2>
+              <p>   傷口在復原時都會經歷發炎、增生還有重建的過程，這時患者常會因為傷口而讓身體有不舒服、心情焦慮沮喪、甚至失去自主活動能力等問題產生。 
+                造成傷口癒合不良的原因，除了身體的慢性發炎反應，導致肌肉流失增加，「營養不良」也是重要因素之一，但要如何讓營養充足、幫助傷口癒合，最重要的是要吃的均衡，熱量、蛋白質攝取一定要足夠。</p>
+              <a href="#" class="btn">more</a>
+            </div>
+            <div class="column_pic">
+              <img src="pic/col-2.jpeg" alt="">
+            </div>
+          </div>
+          <div class="column_item">
+            <div class="column_pic">
+              <img src="pic/col-3.png" alt="">
+            </div>
+            <div class="column_txt">
+              <h2>安心好素，素食者飲食指南</h2>
+              <p>  依食物所含的營養素，分全穀根莖類、豆魚肉蛋類、蔬菜類、水果類、低脂乳品類、油脂與堅果種子類等六大類食物。
+                依素食的食物選擇原則，素食種類有純素、蛋素、奶素、奶蛋素。豆魚肉蛋類食物在「純素、蛋素」者，會以豆類、蛋類取代；而「奶素、奶蛋素」者建議增加低脂或脫脂奶類攝取。</p>
+              <a href="#" class="btn">more</a>
+            </div>
+          </div>
+          <div class="column_item">
+            <div class="column_txt">
+              <h2>居家醫療照護整合計畫</h2>
+              <p>  民國97年開始的長照十年計畫中的居家式照護服務，主要是針對失能且有醫療照護需求(如鼻胃管、氣切管、尿管或壓瘡)的患者，提供居家照護服務，由醫師以及護理師定期至患者家中置換管路或傷口照護。另一個居家式照護服務是安寧緩和醫療居家照護，提供末期患者居家安寧緩和醫療的全人照護。</p>
+              <a href="#" class="btn">more</a>
+            </div>  
+            <div class="column_pic">
+              <img src="pic/col-4.jpg" alt="">
+            </div>
+          </div>
         </div>
     </section>
 
@@ -333,8 +433,8 @@
                 <a href="關於我們.html">關於我們</a>
                 <a href="長照機構.html">長照機構</a>
                 <a href="長照專欄.html">長照專欄</a>
-                <a href="保健器材.html">保健器材</a>
                 <a href="照顧Q&A.html">照顧Q&A</a>
+                <a href="保健器材.html">保健器材</a>
                 <a href="聯絡我們.html">聯絡我們</a>
                 <a href="登入.html">會員登入</a>
                 <a href="#"><i class="fa fa-shopping-cart"></i></a>       
@@ -348,3 +448,4 @@
     </footer>    
 </body>
 </html>
+<script src="clover.js"></script>

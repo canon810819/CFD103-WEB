@@ -6,15 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clover-登入</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="clover-7.css">
+    <link rel="stylesheet" href="login.css">
     <style tye="test/css">
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
     </style>
 </head>
 <body>
     <!-- ---主選單----  -->
    <div class="login-header">  
         <div class="container">
+            <button id="btnHamburger" >
+              <img src="pic/menu_bars.png" width="28">
+            </button>
+            <ul id="menu">
+              <li><a href="關於我們.html">關於我們</a></li>
+              <li><a href="長照機構.html">長照機構</a></li>
+              <li> <a href="長照專欄.html">長照專欄</a></li>
+              <li><a href="照顧Q&A.html">照顧Q&A</a></li>
+              <li><a href="保健器材.html">保健器材</a></li>
+              <li> <a href="聯絡我們.html">聯絡我們</a></li>
+              <li> <a href="登入.html">會員登入</a></li>
+            </ul>
+            <script type="text/javascript">
+              function openCloseMenu(){
+                document.getElementById("menu").classList.toggle("hidden");
+              }
+              function init(){
+                document.getElementById("btnHamburger").onclick = openCloseMenu;
+              }
+              window.addEventListener("load", init, false);
+            </script>
             <a href="index.html" class="logo">
                 <img src="pic/商標設計.png" alt="">
             </a>    
@@ -22,8 +44,8 @@
                 <a href="關於我們.html">關於我們</a>
                 <a href="長照機構.html">長照機構</a>
                 <a href="長照專欄.html">長照專欄</a>
-                <a href="保健器材.html">保健器材</a>
                 <a href="照顧Q&A.html">照顧Q&A</a>
+                <a href="保健器材.html">保健器材</a>
                 <a href="聯絡我們.html">聯絡我們</a>
                 <a href="登入.html">會員登入</a>
                 <a href="#"><i class="fa fa-shopping-cart"></i></a>  
@@ -54,17 +76,19 @@
                       <input type="text" name="" id="user_password"> 
                     </div>
                     <div class="btn-group">
-                      <button class="btn">登入會員</button>
+                      
+                        <a href="#">登入會員</a>
+                       
                     </div>
                     <div class="other">
                       <a href="#">忘記密碼</a>
                       <a href="#">加入會員</a>
                     </div>  
                 </form>
-            </div>
+            </div>   
         </div>
     </div>
-
+   
 
 
     <!-- ------登入footer------ -->
@@ -103,8 +127,8 @@
                 <a href="關於我們.html">關於我們</a>
                 <a href="長照機構.html">長照機構</a>
                 <a href="長照專欄.html">長照專欄</a>
-                <a href="保健器材.html">保健器材</a>
                 <a href="照顧Q&A.html">照顧Q&A</a>
+                <a href="保健器材.html">保健器材</a>
                 <a href="聯絡我們.html">聯絡我們</a>
                 <a href="登入.html">會員登入</a>
                 <a href="#"><i class="fa fa-shopping-cart"></i></a>     

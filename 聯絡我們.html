@@ -6,15 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clover-聯絡我們</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="clover-6.css">
+    <link rel="stylesheet" href="connection.css">
     <style tye="test/css">
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
     </style>
 </head>
 <body>
     <!-- ---主選單----  -->
    <div class="connection-header">  
         <div class="container">
+            <button id="btnHamburger" >
+              <img src="pic/menu_bars.png" width="28">
+            </button>
+            <ul id="menu">
+                <li><a href="關於我們.html">關於我們</a></li>
+                <li><a href="長照機構.html">長照機構</a></li>
+                <li> <a href="長照專欄.html">長照專欄</a></li>
+                <li><a href="照顧Q&A.html">照顧Q&A</a></li>
+                <li><a href="保健器材.html">保健器材</a></li>
+                <li> <a href="聯絡我們.html">聯絡我們</a></li>
+                <li> <a href="登入.html">會員登入</a></li>
+            </ul>
+            <script type="text/javascript">
+                function openCloseMenu(){
+                  document.getElementById("menu").classList.toggle("hidden");
+                }
+                function init(){
+                  document.getElementById("btnHamburger").onclick = openCloseMenu;
+                }
+                window.addEventListener("load", init, false);
+            </script>
             <a href="index.html" class="logo">
                 <img src="pic/商標設計.png" alt="">
             </a>    
@@ -22,8 +44,8 @@
                 <a href="關於我們.html">關於我們</a>
                 <a href="長照機構.html">長照機構</a>
                 <a href="長照專欄.html">長照專欄</a>
-                <a href="保健器材.html">保健器材</a>
                 <a href="照顧Q&A.html">照顧Q&A</a>
+                <a href="保健器材.html">保健器材</a>
                 <a href="聯絡我們.html">聯絡我們</a>
                 <a href="登入.html">會員登入</a>
                 <a href="#"><i class="fa fa-shopping-cart"></i></a>  
@@ -42,41 +64,92 @@
             <div class="connection_title">
               <h1>聯絡我們</h1>
             </div>
-            <div class="connection_box">
-                <div class="connection_list">
-                    <h2>歡迎留下您寶貴的意見，請填寫以下表單，填寫完畢請送出，我們將儘速與您聯繫！</h2>
-                    <div class="connection_txt">
-                      <div class="connection_name">
-                        <ol>
-                          <li>您的姓名</li>
-                          <li>連絡電話</li>
-                          <li>您的信箱</li>
-                          <li>連絡時間</li>
-                          <li>留言主旨</li>
-                          <li>留言內容</li>   
-                          <li>驗證碼</li>
-                        </ol>
-                      </div>
-                      <div class="connection_input">
-                        <input type="text" name="" id="" placeholder="請輸入您的姓名">
-                        <input type="text" name="" id="" placeholder="請輸入您的電話">
-                        <input type="text" name="" id="" placeholder="請輸入您的信箱">
-                        <input type="text" name="" id="" placeholder="請選擇連絡時間">
-                        <input type="text" name="" id="" placeholder="請輸入留言主旨">
-                        <input type="text" name="comments" id="" placeholder="請輸入留言內容" rows="5" cols="20">
-                        <div class="verify">
-                          <input type="text" name="" id="" placeholder="請輸入驗證碼">
-                        </div>  
-                      </div>
-                    </div> 
-                   
-                  </div> 
-                  <div class="connection_btn">
-                    <button class="btn">填好送出</button>
-                  </div>  
-            </div>  
+            <div class="connection_list"> 
+              <div class="list_title">
+                <img src="pic/writer (1).png" alt="">
+                歡迎留下您寶貴的意見，請填寫以下表單，填寫完畢請送出，我們將儘速與您聯繫！
+              </div>
+              <div class="list_txt">
+                <form id="myForm" action=" ">
+                  <ul>
+                    <li class="title">您的姓名</li>
+                    <li>
+                      <input
+                        type="text"
+                        id="user_name"
+                        maxlength="10"
+                        size="50"
+                        placeholder="請填寫中文姓名"
+                      />
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="title">連絡電話</li>
+                    <li>
+                      <input
+                        type="tel"
+                        id="user_tel"
+                        maxlength="10"
+                        size="50"
+                        placeholder="請填寫連絡電話"
+                      />
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="title">您的信箱</li>
+                    <li>
+                      <input
+                        type="email"
+                        id="user_email"
+                        maxlength="10"
+                        size="50"
+                        placeholder="請填寫email"
+                      />
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="title">連絡時間</li>
+                    <li>
+                      <input type="radio" name="time" value="1" />早上09:00至12:00
+                      <input type="radio" name="time" value="0" />中午12:00至18:00
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="title">留言主旨</li>
+                    <li>
+                      <input
+                        type="text"
+                        id="user_txt"
+                        maxlength="10"
+                        size="50"
+                        placeholder="請填寫主旨"
+                      />
+                    </li>
+                  </ul>
+                  <ul>
+                    <li class="title"></li>
+                    <li>
+                      <textarea
+                      name="content" 
+                      id="content" 
+                      cols="51" 
+                      rows="5" 
+                      placeholder="請填入內容">  
+                      </textarea>
+                    </li>
+                  </ul>
+                  <button class="btn">送出</button>
+                </form>
+              </div>  
+            </div>    
         </div>
-    </div>
+        <div class="map_search">
+          <div class="pic">
+              <iframe src="https://www.google.com/maps/d/embed?mid=1F4n8cCW1gqg9y85aSxt3z2cqkZCT1gnh" width="1200" height="380"></iframe>
+          </div>
+      </div>
+    </div>                        
+                    
 
 
     <!-- ------連絡footer------ -->
@@ -115,8 +188,8 @@
               <a href="關於我們.html">關於我們</a>
               <a href="長照機構.html">長照機構</a>
               <a href="長照專欄.html">長照專欄</a>
-              <a href="保健器材.html">保健器材</a>
               <a href="照顧Q&A.html">照顧Q&A</a>
+              <a href="保健器材.html">保健器材</a>
               <a href="聯絡我們.html">聯絡我們</a>
               <a href="登入.html">會員登入</a>
               <a href="#"><i class="fa fa-shopping-cart"></i></a>     

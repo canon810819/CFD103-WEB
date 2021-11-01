@@ -6,15 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clover-長照機構</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="clover-2.css">
+    <link rel="stylesheet" href="newest.css">
+    <link rel="stylesheet" href="owl-newest.css">
+    <!-- owl.carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    </link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    </link>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <style tye="test/css">
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
     </style>
 </head>
 <body>
    <!-- ---主選單----  -->
    <div class="newest-header">  
         <div class="container">
+            <button id="btnHamburger" >
+              <img src="pic/menu_bars.png" width="28">
+            </button>
+            <ul id="menu">
+              <li><a href="關於我們.html">關於我們</a></li>
+              <li><a href="長照機構.html">長照機構</a></li>
+              <li> <a href="長照專欄.html">長照專欄</a></li>
+              <li><a href="照顧Q&A.html">照顧Q&A</a></li>
+              <li><a href="保健器材.html">保健器材</a></li>
+              <li> <a href="聯絡我們.html">聯絡我們</a></li>
+              <li> <a href="登入.html">會員登入</a></li>
+            </ul>
+            <script type="text/javascript">
+              function openCloseMenu(){
+                document.getElementById("menu").classList.toggle("hidden");
+              }
+              function init(){
+                document.getElementById("btnHamburger").onclick = openCloseMenu;
+              }
+              window.addEventListener("load", init, false);
+            </script>
             <a href="index.html" class="logo">
                 <img src="pic/商標設計.png" alt="">
             </a>    
@@ -22,8 +52,8 @@
                     <a href="關於我們.html">關於我們</a>
                     <a href="長照機構.html">長照機構</a>
                     <a href="長照專欄.html">長照專欄</a>
-                    <a href="保健器材.html">保健器材</a>
                     <a href="照顧Q&A.html">照顧Q&A</a>
+                    <a href="保健器材.html">保健器材</a>
                     <a href="聯絡我們.html">聯絡我們</a>
                     <a href="登入.html">會員登入</a>
                     <a href="#"><i class="fa fa-shopping-cart"></i></a>  
@@ -37,117 +67,232 @@
     
     
     <!-- -----長照機構內容------>
+
     <div class="newest_content">
         <div class="newest_item">
             <div class="newest_title">
                 <h1>長照機構</h1>
             </div>
-            <div class="newest_box">
-                <div class="box_group">
-                    <div class="group_name">
-                        <label for="">搜尋地區</label>
-                        <input type="text" name="" id="" placeholder="請選擇">
-                    </div>
-                    <div class="group_name">
-                        <label for="">機構類型</label>
-                        <input type="text" name="" id="" placeholder="請選擇">
-                    </div>
-                    <div class="group_name">
-                        <label for="">價格</label>
-                        <input type="text" name="" id="" placeholder="請選擇">
-                    </div>
-                    <div class="group_name">
-                        <label for="">空床位</label>
-                        <input type="text" name="" id="" placeholder="請選擇">
-                    </div>
-                    <div class="group_name">
-                        <label for="">評價</label>
-                        <input type="text" name="" id="" placeholder="請選擇">
-                    </div>
-                </div>
-                <div class="box_search">
-                    <div class="search_place">
-                        <label for=""></label>
-                        <input type="text" name="" id="" placeholder="請輸入機構名稱或地址">
-                    </div>
-                    <div class="search_btn">
-                        <button class="btn">開始搜尋<i class="fa fa-search"></i></button>
-                    </div>
-                </div>
-            </div>
+            <div class="banner_box">
+              <div class="box_group">
+                  <div class="group_add">
+                    <label for="">搜尋地區</label>
+                    <select name="city" id="city">
+                      <option selected="selected" value="">請選擇</option>
+                      <option value="宜蘭縣">宜蘭縣</option>
+                      <option value="基隆市">基隆市</option>
+                      <option value="新北市">新北市</option>
+                      <option value="臺北市">臺北市</option>
+                      <option value="桃園市">桃園市</option>
+                      <option value="新竹市">新竹市</option>
+                      <option value="新竹縣">新竹縣</option>
+                      <option value="苗栗縣">苗栗縣</option>
+                      <option value="臺中市">臺中市</option>
+                      <option value="彰化縣">彰化縣</option>
+                      <option value="南投縣">南投縣</option>
+                      <option value="雲林縣">雲林縣</option>
+                      <option value="嘉義縣">嘉義縣</option>
+                      <option value="臺南市">臺南市</option>
+                      <option value="嘉義市">嘉義市</option>
+                      <option value="高雄市">高雄市</option>
+                      <option value="屏東縣">屏東縣</option>
+                      <option value="臺東縣">臺東縣</option>
+                      <option value="花蓮縣">花蓮縣</option>
+                      <option value="澎湖縣">澎湖縣</option>
+                      <option value="金門縣">金門縣</option>
+                    </select>
+                  </div>
+                  <div class="group_style">
+                    <label for="">機構類型</label>
+                    <select name="class" id="class">
+                      <option selected="selected" value="">請選擇</option>
+                      <option value="養護型機構">養護型機構</option>
+                      <option value="長期照護型機構">長期照護型機構</option>
+                      <option value="護理之家">護理之家</option>
+                      <option value="護理之家,居家護理">護理之家,居家護理</option>
+                      <option value="護理之家,居家服務">護理之家,居家服務</option>
+                      <option value="日間照顧中心">日間照顧中心</option>
+                    </select>
+                  </div>
 
-            <!-- -------長照地圖------- -->
-            <div class="newest_map">
-                <h2>最新長照機構</h2>
-                <div class="map_box">
-                    <div class="map_txt">
-                        <h3>依地圖搜尋</h3>
-                    </div>
-                    <div class="map_search">
-                        <div class="pic">
-                            <iframe src="https://www.google.com/maps/d/embed?mid=1F4n8cCW1gqg9y85aSxt3z2cqkZCT1gnh" width="640" height="480"></iframe>
-                        </div>
-                    </div>
+                  <div class="group_price">
+                    <label for="">價格</label>
+                    <select name="price" id="price">
+                      <option selected="selected" value="">請選擇</option>
+                      <option value="1">1~10000</option>
+                      <option value="2">10001~20000</option>
+                      <option value="3">20001~30000</option>
+                      <option value="4">30001~40000</option>
+                      <option value="5">40001~50000</option>
+                      <option value="6">50001~60000</option>
+                      <option value="7">60001~</option>
+                    </select>
+                  </div>
+                  <div class="group_seat">
+                    <label for="">空床位</label>
+                    <select name="bed" id="bed">
+                      <option selected="selected" value="">請選擇</option>
+                      <option value="1">1~5</option>
+                      <option value="2">6~10</option>
+                      <option value="3">11~15</option>
+                      <option value="4">16~20</option>
+                    
+                    </select>
+                  </div>
+                  <div class="group_evaluation">
+                    <label for="">評價</label>
+                    <select name="rating" id="rating">
+                      <option selected="selected" value="">請選擇</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    
+                    </select>
+                  </div>
+              </div>
+              <div class="box_search">
+                <div class="search_place">
+                  <label for=""></label>
+                    <input type="text" name="" id="" placeholder="請輸入機構名稱或地址">
                 </div>
+                <div class="search_btn">
+                  <a href="#">開始搜尋<i class="fa fa-search"></i></a>
+                </div>
+              </div>
             </div>
-            <div class="place_item">
-                <nav class="list_place_left">
-                    <ol>
-                        <li><a href="#">宜蘭縣</a></li>
-                        <li><a href="#">新北市</a></li>
-                        <li><a href="#">桃園市</a></li>
-                        <li><a href="#">新竹縣</a></li>
-                        <li><a href="#">台中市</a></li>
-                        <li><a href="#">南投縣</a></li>
-                        <li><a href="#">嘉義縣</a></li>
-                        <li><a href="#">嘉義市</a></li>
-                        <li><a href="#">屏東縣</a></li>
-                        <li><a href="#">花蓮縣</a></li>
-                    </ol>
-                    <ol>
-                        <li><a href="#">48間選項</a></li>
-                        <li><a href="#">275間選項</a></li>
-                        <li><a href="#">134間選項</a></li>
-                        <li><a href="#">400間選項</a></li>
-                        <li><a href="#">34間選項</a></li>
-                        <li><a href="#">43間選項</a></li>
-                        <li><a href="#">45間選項</a></li>
-                        <li><a href="#">23間選項</a></li>
-                        <li><a href="#">35間選項</a></li>
-                        <li><a href="#">24間選項</a></li>
-                    </ol>
-                </nav>
-                <nav class="list_place_right">
-                    <ol>
-                        <li><a href="#">基隆市</a></li>
-                        <li><a href="#">台北市</a></li>
-                        <li><a href="#">新竹市</a></li>
-                        <li><a href="#">苗栗縣</a></li>
-                        <li><a href="#">彰化縣</a></li>
-                        <li><a href="#">雲林縣</a></li>
-                        <li><a href="#">台南市</a></li>
-                        <li><a href="#">高雄市</a></li>
-                        <li><a href="#">台東縣</a></li>
-                        <li><a href="#">澎湖縣</a></li>
-                        <li><a href="#">金門縣</a></li>
-                    </ol>
-                    <ol>
-                        <li><a href="#">233間選項</a></li>
-                        <li><a href="#">345間選項</a></li>
-                        <li><a href="#">134間選項</a></li>
-                        <li><a href="#">108間選項</a></li>
-                        <li><a href="#">67間選項</a></li>
-                        <li><a href="#">43間選項</a></li>
-                        <li><a href="#">56間選項</a></li>
-                        <li><a href="#">24間選項</a></li>
-                        <li><a href="#">23間選項</a></li>
-                        <li><a href="#">5間選項</a></li>
-                        <li><a href="#">1間選項</a></li>
+            <div class="box_container">
+              <!-- -------長照地圖------- -->
+            
+              <div class="newest_map">
+                  <h2>最新長照機構</h2>
+                  <div class="owl-carousel owl-theme">
+                      <div class="item">
+                        <a href="#"> 
+                          <h4>屏東縣安德老人養護中心</h4>
+                          <img src="pic/home-1.jpg" alt="">
+                        </a>   
+                      </div>
+                      <div class="item">
+                        <a href="#">  
+                          <h4>建安護理之家</h4>
+                          <img src="pic/home-2.jpg" alt="">
+                        </a>  
+                      </div>
+                      <div class="item">
+                        <a href="#"> 
+                          <h4>臺東縣老人長期照顧中心</h4>
+                          <img src="pic/home-3.jpg" alt="">
+                        </a>   
+                      </div>
+                      <div class="item">
+                        <a href="#"> 
+                          <h4>海山護理之家</h4>
+                          <img src="pic/home-4.jpg" alt="">
+                        </a> 
+                      </div>
+                      <div class="item">
+                        <a href="#">
+                          <h4>花蓮縣長生老人養護中心</h4>
+                          <img src="pic/home-6.jpg" alt="">
+                        </a> 
+                      </div>
+                      <div class="item">
+                        <a href="#">
+                          <h4>嘉義博愛仁愛之家</h4>
+                          <img src="pic/home-7.jpg" alt="">
+                        </a>  
+                      </div>
+                  </div>
+                  <script>
+                     $(".owl-carousel").owlCarousel({
+                          loop: true, // 循環播放
+                          margin: 10, // 外距 10px
+                          nav: true, // 顯示點點
+                          responsive: {
+                            0: {
+                              items: 1 // 螢幕大小為 0~600 顯示 1 個項目
+                            },
+                            600: {
+                              items: 3 // 螢幕大小為 600~1000 顯示 3 個項目
+                            },
+                            1000: {
+                              items: 5 // 螢幕大小為 1000 以上 顯示 5 個項目
+                            }
+                          }
+                        });
+                  </script>
+                  <div class="map_box">
+                      <div class="map_txt">
+                          <h3>依地圖搜尋</h3>
+                      </div>
+                      <div class="map_search">
+                          <div class="pic">
+                              <iframe src="https://www.google.com/maps/d/embed?mid=1F4n8cCW1gqg9y85aSxt3z2cqkZCT1gnh" width="640" height="480"></iframe>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="place_item">
+                  <nav class="list_place_left">
+                      <ol>
+                          <li><a href="#">宜蘭縣</a></li>
+                          <li><a href="#">新北市</a></li>
+                          <li><a href="#">桃園市</a></li>
+                          <li><a href="#">新竹縣</a></li>
+                          <li><a href="#">台中市</a></li>
+                          <li><a href="#">南投縣</a></li>
+                          <li><a href="#">嘉義縣</a></li>
+                          <li><a href="#">嘉義市</a></li>
+                          <li><a href="#">屏東縣</a></li>
+                          <li><a href="#">花蓮縣</a></li>
+                      </ol>
+                      <ol>
+                          <li id=""><a href="#">48間選項</a></li>
+                          <li><a href="#">275間選項</a></li>
+                          <li><a href="#">134間選項</a></li>
+                          <li><a href="#">400間選項</a></li>
+                          <li><a href="#">34間選項</a></li>
+                          <li><a href="#">43間選項</a></li>
+                          <li><a href="#">45間選項</a></li>
+                          <li><a href="#">23間選項</a></li>
+                          <li><a href="#">35間選項</a></li>
+                          <li><a href="#">24間選項</a></li>
+                      </ol>
+                  </nav>
+                  <nav class="list_place_right">
+                      <ol>
+                          <li><a href="#">基隆市</a></li>
+                          <li><a href="#">台北市</a></li>
+                          <li><a href="#">新竹市</a></li>
+                          <li><a href="#">苗栗縣</a></li>
+                          <li><a href="#">彰化縣</a></li>
+                          <li><a href="#">雲林縣</a></li>
+                          <li><a href="#">台南市</a></li>
+                          <li><a href="#">高雄市</a></li>
+                          <li><a href="#">台東縣</a></li>
+                          <li><a href="#">澎湖縣</a></li>
+                          <li><a href="#">金門縣</a></li>
+                      </ol>
+                      <ol>
+                          <li><a href="#">233間選項</a></li>
+                          <li><a href="#">345間選項</a></li>
+                          <li><a href="#">134間選項</a></li>
+                          <li><a href="#">108間選項</a></li>
+                          <li><a href="#">67間選項</a></li>
+                          <li><a href="#">43間選項</a></li>
+                          <li><a href="#">56間選項</a></li>
+                          <li><a href="#">24間選項</a></li>
+                          <li><a href="#">23間選項</a></li>
+                          <li><a href="#">5間選項</a></li>
+                          <li><a href="#">1間選項</a></li>
 
-                    </ol>    
-                </nav>
+                      </ol>    
+                  </nav>
+              </div>
             </div>
-        </div>
+        </div>     
     </div>
 
 
@@ -188,8 +333,8 @@
                     <a href="關於我們.html">關於我們</a>
                     <a href="長照機構.html">長照機構</a>
                     <a href="長照專欄.html">長照專欄</a>
-                    <a href="保健器材.html">保健器材</a>
                     <a href="照顧Q&A.html">照顧Q&A</a>
+                    <a href="保健器材.html">保健器材</a>
                     <a href="聯絡我們.html">聯絡我們</a>
                     <a href="登入.html">會員登入</a>
                     <a href="#"><i class="fa fa-shopping-cart"></i></a>  
