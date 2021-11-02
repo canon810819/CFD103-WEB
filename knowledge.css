@@ -374,7 +374,6 @@ a {
  @media screen and (max-width: 768px){
     .column_section{
         max-width: 768px;
-        padding: 0px;
         background:#fff;
     }
     .column_container{
@@ -387,6 +386,7 @@ a {
         justify-content: center;
         align-items: center;
         padding-bottom: 30px;
+        padding-top: 50px;
     }
     .column_container .column_title{
         text-align: center;
@@ -641,6 +641,7 @@ line-height: 24px;
             border-bottom: 3px solid rgb(107, 22, 86);
             width: 100%;
             max-width: 280px;
+            line-height: 24px;
             
     }
     .connection_place .connection_txt{
@@ -656,10 +657,11 @@ line-height: 24px;
             border-bottom: 3px solid rgb(107, 22, 86);
             width: 100%;
             max-width: 280px;
+            line-height: 24px;
     }
     .sub_place .sub_txt input{
         width: 100%;
-        max-width: 200px;
+        max-width: 150px;
         border: none;
         box-shadow: rgb(20%, 20%, 40%, .4) 3px 3px 3px inset ;
         background-color: #fff;

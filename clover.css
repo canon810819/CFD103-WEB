@@ -683,27 +683,21 @@ body{
         transition: all 0.45s;
     }
 
-    /* newest_item */
+    /* newest_item @media */
     @media screen and (max-width: 768px){
         .newest_container{
             max-width: 768px; 
-            /* margin-top: 50px; */
+            margin-top: 250px;
         }
         .newest_section .newest_title{
             text-align: center;
             margin-bottom: 50px;
-            margin-top: 180px;
+            margin-top: 200px;
+            margin-bottom: 100px;
         }
         .newest_container .newest_pic{
-            display: flex;
-            justify-content: flex-start;
+            display: none;
           
-        }
-        .newest_container .newest_pic img{
-            width: 100%;
-            max-width: 200px;
-            opacity: .5;
-            z-index: 1;
         }
         .newest_section .newest_title h2{
             font-size: 30px;
@@ -855,8 +849,11 @@ body{
      .ans_content .content_txt img:hover{
         opacity: calc(.3);
      }
-
+     /* ---knowledge @media--- */
      @media screen and (max-width: 768px){
+        .knowledge_logo{
+            display: none;
+        }
         .knowledge_section{ 
             max-width: 768px;  
             padding: 0px;
@@ -880,6 +877,7 @@ body{
         }
         .knowledge_section 
         .knowledge_title h2{
+            margin-top: 30px;
             font-size: 30px;
             display: inline-block;
             color: rgb(247, 173, 173);
@@ -976,7 +974,7 @@ body{
         margin-bottom: 100px;
     }
     .column_container .column_title h2{
-        font-size: 30px;
+        font-size: 40px;
         display: inline-block;
         color: rgb(247, 173, 173);
     }
@@ -1041,6 +1039,8 @@ body{
         background-color: rgb(245, 199, 199);
         transition: all .45s;
       } 
+
+      /* --column @media-- */
       @media screen and (max-width: 768px){
         .column_section{
             max-width: 768px;
@@ -1056,12 +1056,13 @@ body{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding-bottom: 30px;
+            padding-bottom: 100px;
         }
         .column_container .column_title{
             text-align: center;
             margin-bottom: 50px;
-            margin-top: 50px;
+            margin-top: 100px;
+            margin-bottom: 100px;
         }
         .column_container .column_title h2{
             font-size: 30px;
@@ -1133,6 +1134,8 @@ body{
           } 
          
       }
+
+      /* --column @media-- */
       @media screen and (max-width: 420px){
         .column_item .column_txt p{
             display: none;
@@ -1175,7 +1178,7 @@ body{
           }
       }
 
-    /* -----footer---- */
+    /* -----footer ---- */
     .clover_footer{
         max-width: 1200px;
         margin: auto;
@@ -1279,6 +1282,7 @@ body{
         line-height: 24px;    
     }
 
+    /* -----footer @media---- */
     @media screen and (max-width: 768px){
         .clover_footer{
             
@@ -1304,6 +1308,7 @@ body{
                 border-bottom: 3px solid rgb(107, 22, 86);
                 width: 100%;
                 max-width: 280px;
+                line-height: 24px;
                 
         }
         .connection_place .connection_txt{
@@ -1319,10 +1324,11 @@ body{
                 border-bottom: 3px solid rgb(107, 22, 86);
                 width: 100%;
                 max-width: 280px;
+                line-height: 24px;
         }
         .sub_place .sub_txt input{
             width: 100%;
-            max-width: 200px;
+            max-width: 150px;
             border: none;
             box-shadow: rgb(20%, 20%, 40%, .4) 3px 3px 3px inset ;
             background-color: #fff;

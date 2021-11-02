@@ -191,6 +191,7 @@ body{
     margin: 30px;
     font-size: 20px;
     color: rgb(247, 138, 138);
+    letter-spacing: 1px;
 }
 .connection_list .list_title img{
     opacity: .3;
@@ -373,6 +374,7 @@ line-height: 24px;
             border-bottom: 3px solid rgb(107, 22, 86);
             width: 100%;
             max-width: 280px;
+            line-height: 24px;
             
     }
     .connection_place .connection_txt{
@@ -388,15 +390,17 @@ line-height: 24px;
             border-bottom: 3px solid rgb(107, 22, 86);
             width: 100%;
             max-width: 280px;
+            line-height: 24px;
     }
     .sub_place .sub_txt input{
         width: 100%;
-        max-width: 200px;
+        max-width: 150px;
         border: none;
         box-shadow: rgb(20%, 20%, 40%, .4) 3px 3px 3px inset ;
         background-color: #fff;
         outline: none;
         padding: 3px;
+
         
     }
     .sub_place .sub_txt button{
